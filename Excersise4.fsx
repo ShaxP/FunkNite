@@ -1,15 +1,10 @@
-open System
+open System.IO
 
-type Amount = decimal
+let writeTransactionToFile transaction = File.AppendAllText("statement.txt", "some string")
+let writeTransactionToConsole transaction = printfn "%s" "Something"
 
-type Timestamp = DateTime
 
-type Transaction = 
-    | Deposition of Amount * Timestamp
-    | Withdrawal of Amount * Timestamp
 
-// Övningar
-// Givet typerna Amount, Timestamp och Transaction enligt ovan
-// 1. Skriv om funktionerna withdraw och deposit
-// 2. Skriv om funktionen balance. Tips: använd List.sumBy med en funktion som tar en Transaction och returnerar dess belopp
-// 3. Testa koden
+//Forstsätt där vi avslutade uppgift 3
+//1. Bygg ut "transaction" funktionerna så att dom har loggningsfunktionalitet
+//  - Försök experimentera med Higher-order functions, currying och partial application.
