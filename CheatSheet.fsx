@@ -1,7 +1,7 @@
 //#region The 'let' keyword
 //let <identifier> = <value>
 
-let a = 0
+let a = 12
 let b = 0.0 //64-bit a.k.a double
 let c = 0.0m //decimal
 let d = "Hello World!"
@@ -12,7 +12,7 @@ let f = """{ "word1": "Hello",
 
 let g, h, i, j, k, l = a, b, c, d, e, f
 
-let ``Hello World!`` = "Hello World!"
+let ``This is an identifier!`` = "Hello World!"
 //#endregion
 
 //#region Functions
@@ -22,9 +22,11 @@ let <identifier> (<argument>: <type>) =
 *)
 
 let redouble n1 = n1 + n1 
+redouble 3
 
 let bisect n1 = 
     n1 / 2
+
 
 let square (n1: int) = n1 * n1
 
@@ -95,6 +97,7 @@ let extendedNumbers = numbers @ [11 .. 20]
 let numbers = [1 .. 10]
 
 List.sum numbers
+
 
 numbers |> List.sum
 
